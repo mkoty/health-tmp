@@ -1,5 +1,7 @@
+@import "../../share";
+
 .working-place-container {
-  height: 100%;
+  height: calc(100% - #{$header-height});
 }
 
 app-workspace-manager {
