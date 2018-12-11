@@ -6,3 +6,20 @@
   background-color: white;
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
 }
+
+.header-logo {
+  background-image: url('../../assets/Jannsen_Logo.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 100px;
+  height: 43px;
+  margin: 0 10px 0 20px;
+}
+
+.header-title {
+  font-family: Karbon;
+  line-height: 24px;
+  font-size: 26px;
+  color: #1C75BC;
+  margin-top: 6px;;
+}
