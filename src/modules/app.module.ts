@@ -11,6 +11,7 @@ import {HeaderComponent} from '../components/header/header.component';
 import {ToolsPanelComponent} from '../components/tools-panel/tools-panel.component';
 import {WorkspaceManagerComponent} from '../components/workspace-manager/workspace-manager.component';
 import {StudyListComponent} from '../components/study-list/study-list.component';
+import {StudyCardComponent} from '../components/study-card/study-card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {StudyListComponent} from '../components/study-list/study-list.component'
     HeaderComponent,
     ToolsPanelComponent,
     WorkspaceManagerComponent,
-    StudyListComponent
+    StudyListComponent,
+    StudyCardComponent
   ],
   imports: [
     BrowserModule,

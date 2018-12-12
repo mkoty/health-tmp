@@ -1,3 +1,6 @@
 <div class="user-panel-container">
-
+  <div *ngFor="let menuItem of userMenuItem"
+       class="user-menu-item flex-column">
+    <img class="user-menu-icon" [src]="menuItem.path">
+  </div>
 </div>

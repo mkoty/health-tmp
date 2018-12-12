@@ -1,1 +1,5 @@
-<div class="study-list-container"></div>
+<div class="study-list-container flex-row">
+  <app-study-card *ngFor="let card of studyCards"
+                  [card]="card">
+  </app-study-card>
+</div>

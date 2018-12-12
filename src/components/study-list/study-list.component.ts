@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {studyCards} from '../../constants/study-cards';
 
 @Component({
   selector: 'app-study-list',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./study-list.component.scss']
 })
 export class StudyListComponent implements OnInit {
+  studyCards = studyCards;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
