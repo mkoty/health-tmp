@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {AppRoutingModule} from './app-routing.module';
 import {MaterialModule} from './material.module';
@@ -12,6 +13,7 @@ import {ToolsPanelComponent} from '../components/tools-panel/tools-panel.compone
 import {WorkspaceManagerComponent} from '../components/workspace-manager/workspace-manager.component';
 import {StudyListComponent} from '../components/study-list/study-list.component';
 import {StudyCardComponent} from '../components/study-card/study-card.component';
+import {WelcomePageComponent} from '../components/welcome-page/welcome-page.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,16 @@ import {StudyCardComponent} from '../components/study-card/study-card.component'
     ToolsPanelComponent,
     WorkspaceManagerComponent,
     StudyListComponent,
-    StudyCardComponent
+    StudyCardComponent,
+    WelcomePageComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

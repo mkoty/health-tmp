@@ -8,16 +8,16 @@ import {Component, OnInit} from '@angular/core';
 export class UserPanelComponent implements OnInit {
   userMenuItem = [
     {
-      path: '../../assets/icon_menu.svg'
+      path: '../../assets/icon-menu.svg'
     },
     {
-      path: '../../assets/icon_blocks.svg'
+      path: '../../assets/icon-blocks.svg'
     },
     {
-      path: '../../assets/icon_search.svg'
+      path: '../../assets/icon-search.svg'
     },
     {
-      path: '../../assets/icon_apps.svg'
+      path: '../../assets/icon-apps.svg'
     }
   ];
 

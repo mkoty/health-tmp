@@ -1,0 +1,30 @@
+.welcome-page-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #F5AC25;
+  color: white;
+}
+
+.welcome-logo {
+  width: 100px;
+  height: 43px;
+  background-image: url('../../assets/logo-welcome-page.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.welcome-info-container {
+  padding: 100px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.welcome-description {
+  max-width: 570px;
+  font-family: Karbon-Thin;
+  font-size: 24px;
+}

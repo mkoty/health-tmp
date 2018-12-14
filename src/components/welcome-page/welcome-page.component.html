@@ -1,0 +1,25 @@
+<div class="welcome-page-container flex-row">
+
+  <div class="welcome-info-container flex-row">
+    <div class="welcome-description-container">
+      <div class="welcome-logo"></div>
+      <h1>rHealth Accelerator Tools</h1>
+      <div class="welcome-description">This tool is for users within MD team who wants to create patient cohorts for their research. The user can make selections accordingly from the dedicated segments of the notebook.</div>
+    </div>
+
+    <div class="login-container">
+      <form class="example-form"
+            [formGroup]="loginForm" >
+        <mat-form-field class="login-input">
+          <input matInput type="text"
+                 placeholder="Login"
+                 formControlName="login">
+        </mat-form-field>
+        <mat-form-field class="password-input">
+          <input matInput placeholder="Password">
+        </mat-form-field>
+      </form>
+    </div>
+  </div>
+
+</div>
