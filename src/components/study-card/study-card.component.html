@@ -1,6 +1,15 @@
 <div class="study-card-container">
-  <img src="../../assets/folder.svg"/>
+  <div class="study-path flex-row">
+    <img class="study-path-logo" src="../../assets/folder.svg"/>
+    <span>{{card.path}}</span>
+  </div>
+
   <div class="study-card-title">{{card.title}}</div>
-  <img src="../../assets/db.svg"/>
+
+  <div class="study-database flex-row">
+    <img class="study-database-logo" src="../../assets/db.svg"/>
+    <div class="study-database-name">{{card.database}}</div>
+  </div>
+
   <div class="study-card-description">{{card.description}}</div>
 </div>
