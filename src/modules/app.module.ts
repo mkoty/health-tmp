@@ -14,6 +14,7 @@ import {WorkspaceManagerComponent} from '../components/workspace-manager/workspa
 import {StudyListComponent} from '../components/study-list/study-list.component';
 import {StudyCardComponent} from '../components/study-card/study-card.component';
 import {WelcomePageComponent} from '../components/welcome-page/welcome-page.component';
+import {UserEnvironmentComponent} from '../components/user-environment/user-environment.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {WelcomePageComponent} from '../components/welcome-page/welcome-page.comp
     WorkspaceManagerComponent,
     StudyListComponent,
     StudyCardComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    UserEnvironmentComponent
   ],
   imports: [
     BrowserModule,
