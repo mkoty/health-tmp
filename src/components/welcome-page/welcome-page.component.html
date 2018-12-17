@@ -7,17 +7,19 @@
       <div class="welcome-description">This tool is for users within MD team who wants to create patient cohorts for their research. The user can make selections accordingly from the dedicated segments of the notebook.</div>
     </div>
 
-    <div class="login-container">
-      <form class="example-form"
+    <div class="authorization-container">
+      <form class="flex-column"
             [formGroup]="loginForm" >
-        <mat-form-field class="login-input">
-          <input matInput type="text"
+        <mat-form-field>
+          <input matInput
                  placeholder="Login"
                  formControlName="login">
         </mat-form-field>
-        <mat-form-field class="password-input">
-          <input matInput placeholder="Password">
+        <mat-form-field>
+          <input matInput
+                 placeholder="Password">
         </mat-form-field>
+        <button mat-raised-button color="primary">Sign In</button>
       </form>
     </div>
   </div>
