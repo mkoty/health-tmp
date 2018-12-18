@@ -1,3 +1,13 @@
 <div class="tools-panel-container">
+  <div class="tools-menu-items-container flex-column">
+    <button mat-button
+            *ngFor="let toolsItem of toolsPanelItems"
+            [disabled]="!toolsItem.isActive">
+      <div class="tool-item-content flex-row">
+        <img class="tool-item-icon" [src]="toolsItem.iconPath">
+        <span>{{toolsItem.name}}</span>
+      </div>
+    </button>
+  </div>
 
 </div>
