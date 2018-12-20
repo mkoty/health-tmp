@@ -18,7 +18,6 @@ import {WelcomePageComponent} from '../components/welcome-page/welcome-page.comp
 import {UserEnvironmentComponent} from '../components/user-environment/user-environment.component';
 
 import {AuthenticateService} from '../services/authenticate.service';
-// import {AuthenticateGuard} from '../guards/authenticate.guard';
 
 @NgModule({
   declarations: [

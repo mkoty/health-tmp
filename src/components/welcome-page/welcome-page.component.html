@@ -17,17 +17,25 @@
         <mat-form-field>
           <input matInput
                  placeholder="Login"
-                 formControlName="loginControl">
+                 formControlName="login"
+                 (input)="hideError()">
         </mat-form-field>
         <mat-form-field>
           <input matInput
                  type="password"
                  placeholder="Password"
-                 formControlName="passwordControl">
+                 formControlName="password"
+                 (input)="hideError()">
         </mat-form-field>
-        <button type="submit"
+        <mat-error [hidden]="hideSignInError"
+                   class="authorization-submit-error">
+          Login or Password is incorrect
+        </mat-error>
+        <button class="authorization-submit-button"
+                type="submit"
                 mat-raised-button
-                color="primary">
+                color="primary"
+                [disabled]="!loginForm.valid">
           Sign In
         </button>
       </form>

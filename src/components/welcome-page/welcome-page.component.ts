@@ -13,6 +13,7 @@ import {AuthResponse} from '../../entities/AuthResponse';
 })
 export class WelcomePageComponent implements OnInit {
   loginForm: FormGroup;
+  hideSignInError = true;
 
   constructor(private formBuilder: FormBuilder,
               private authenticateService: AuthenticateService,
@@ -22,18 +23,23 @@ export class WelcomePageComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      loginControl: ['', [Validators.required]],
-      passwordControl: ['', [Validators.required]]
+      login: ['', [Validators.required]],
+      password: ['', [Validators.required]]
     });
   }
 
   private onSubmit(): void {
     this.authenticateService
       .signIn(this.loginForm.value.loginControl, this.loginForm.value.passwordControl)
-      .subscribe((resp: AuthResponse) => {
-        this.localStorageService.saveToken(resp.token);
-        this.router.navigate(['/environment']);
-      });
+      .subscribe(
+        (resp: AuthResponse) => {
+          this.localStorageService.saveToken(resp.token);
+          this.router.navigate(['/environment']);
+        }, error => {
+          this.hideSignInError = false;
+        });
   }
-
+  private hideError(): void {
+    this.hideSignInError = true;
+  }
 }

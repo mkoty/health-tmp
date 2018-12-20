@@ -30,6 +30,11 @@
   font-size: 24px;
 }
 
+.authorization-submit-error, .authorization-submit-button {
+  position: relative;
+  top: -13px;
+}
+
 // Override inputs color
 .mat-form-field-empty.mat-form-field-label, .mat-form-field-appearance-legacy .mat-form-field-label  {
   color: white !important;
