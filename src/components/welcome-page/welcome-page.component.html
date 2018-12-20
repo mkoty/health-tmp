@@ -4,22 +4,32 @@
     <div class="welcome-description-container">
       <div class="welcome-logo"></div>
       <h1>rHealth Accelerator Tools</h1>
-      <div class="welcome-description">This tool is for users within MD team who wants to create patient cohorts for their research. The user can make selections accordingly from the dedicated segments of the notebook.</div>
+      <div class="welcome-description">
+        This tool is for users within MD team who wants to create patient cohorts for their research.
+        The user can make selections accordingly from the dedicated segments of the notebook.
+      </div>
     </div>
 
     <div class="authorization-container">
       <form class="flex-column"
+            (ngSubmit)="onSubmit()"
             [formGroup]="loginForm" >
         <mat-form-field>
           <input matInput
                  placeholder="Login"
-                 formControlName="login">
+                 formControlName="loginControl">
         </mat-form-field>
         <mat-form-field>
           <input matInput
-                 placeholder="Password">
+                 type="password"
+                 placeholder="Password"
+                 formControlName="passwordControl">
         </mat-form-field>
-        <button routerLink="/environment" mat-raised-button color="primary">Sign In</button>
+        <button type="submit"
+                mat-raised-button
+                color="primary">
+          Sign In
+        </button>
       </form>
     </div>
   </div>

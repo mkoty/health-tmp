@@ -1,6 +1,15 @@
 <app-header></app-header>
-<div class="flex-row working-place-container">
-  <app-tools-panel></app-tools-panel>
-  <app-workspace-manager></app-workspace-manager>
-</div>
+<mat-sidenav-container class="working-place-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    <app-user-panel></app-user-panel>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="flex-row full-height">
+      <app-tools-panel></app-tools-panel>
+      <app-workspace-manager></app-workspace-manager>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
 

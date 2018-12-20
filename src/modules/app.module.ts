@@ -2,6 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import {AppRoutingModule} from './app-routing.module';
 import {MaterialModule} from './material.module';
@@ -15,6 +16,9 @@ import {StudyListComponent} from '../components/study-list/study-list.component'
 import {StudyCardComponent} from '../components/study-card/study-card.component';
 import {WelcomePageComponent} from '../components/welcome-page/welcome-page.component';
 import {UserEnvironmentComponent} from '../components/user-environment/user-environment.component';
+
+import {AuthenticateService} from '../services/authenticate.service';
+// import {AuthenticateGuard} from '../guards/authenticate.guard';
 
 @NgModule({
   declarations: [
@@ -35,9 +39,12 @@ import {UserEnvironmentComponent} from '../components/user-environment/user-envi
     AppRoutingModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AuthenticateService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

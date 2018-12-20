@@ -2,9 +2,14 @@
 
 .header-container {
   height: $header-height;
-  width: 100%;
+}
+
+.header-title-container {
+  // - 1px in height for drawing box-shadow
+  height: calc(#{$header-height} - 1px);
+  width: calc(100% - #{$user-panel-width});
+  box-shadow: 0px 1px 0px 0px rgba(51, 51, 51, 0.1);
   background-color: white;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
 }
 
 .header-logo {
@@ -21,4 +26,15 @@
   font-size: 26px;
   color: #1C75BC;
   margin-top: 6px;;
+}
+
+.menu-icon-container {
+  width: $user-panel-width;
+  height: $header-height;
+  background: linear-gradient(90deg, #333333 0%, #424242 100%);
+}
+
+.menu-icon {
+  margin: auto;
+  cursor: pointer;
 }

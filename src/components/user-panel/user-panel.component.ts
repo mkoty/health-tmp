@@ -8,9 +8,6 @@ import {Component, OnInit} from '@angular/core';
 export class UserPanelComponent implements OnInit {
   userMenuItem = [
     {
-      path: '../../assets/icon-menu.svg'
-    },
-    {
       path: '../../assets/icon-blocks.svg'
     },
     {
