@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 import {AppRoutingModule} from './app-routing.module';
 import {MaterialModule} from './material.module';
@@ -18,6 +18,7 @@ import {WelcomePageComponent} from '../components/welcome-page/welcome-page.comp
 import {UserEnvironmentComponent} from '../components/user-environment/user-environment.component';
 
 import {AuthenticateService} from '../services/authenticate.service';
+import {StudiesService} from '../services/studies.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {AuthenticateService} from '../services/authenticate.service';
     HttpClientModule
   ],
   providers: [
-    AuthenticateService
+    {provide: HTTP_INTERCEPTORS, useClass: AuthenticateService, multi: true},
+    StudiesService
   ],
   bootstrap: [AppComponent]
 })

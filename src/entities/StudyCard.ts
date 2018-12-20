@@ -1,6 +1,9 @@
 export interface StudyCard {
-  title: string;
-  path: string;
-  database: string;
-  description: string;
+  id: number;
+  count: number;
+  name: string;
+  folder: string;
+  databaseName: string;
+  notebookUser: string;
+  userName: string;
 }

@@ -30,7 +30,7 @@ export class WelcomePageComponent implements OnInit {
 
   private onSubmit(): void {
     this.authenticateService
-      .signIn(this.loginForm.value.loginControl, this.loginForm.value.passwordControl)
+      .signIn(this.loginForm.value.login, this.loginForm.value.password)
       .subscribe(
         (resp: AuthResponse) => {
           this.localStorageService.saveToken(resp.token);
