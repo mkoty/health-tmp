@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {studyCards} from '../../constants/study-cards';
 import {StudiesService} from '../../services/studies.service';
 import {StudyCard} from '../../entities/StudyCard';
 

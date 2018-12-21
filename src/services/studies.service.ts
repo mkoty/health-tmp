@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../environments/environment';
-import {StudyCard} from '../entities/StudyCard';
 import {Observable} from 'rxjs';
+import {StudyCardResponse} from '../entities/StudyCardResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +13,8 @@ export class StudiesService {
   constructor(private http: HttpClient) {
   }
 
-  getAllStudies(): Observable<StudyCard[]> {
+  getAllStudies(): Observable<StudyCardResponse> {
     return this.http
-      .get<StudyCard[]>(this.apiUrl + 'studies');
+      .get<StudyCardResponse>(this.apiUrl + 'studies');
   }
 }

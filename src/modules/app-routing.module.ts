@@ -4,10 +4,15 @@ import {StudyListComponent} from '../components/study-list/study-list.component'
 import {WelcomePageComponent} from '../components/welcome-page/welcome-page.component';
 import {UserEnvironmentComponent} from '../components/user-environment/user-environment.component';
 import {AuthenticateGuard} from '../guards/authenticate.guard';
+import {LoginGuard} from '../guards/login.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
-  {path: 'login', component: WelcomePageComponent},
+  {
+    path: 'login',
+    component: WelcomePageComponent,
+    canActivate: [LoginGuard]
+  },
   {
     path: 'environment',
     component: UserEnvironmentComponent,
